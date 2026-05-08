@@ -10,6 +10,12 @@ For the first time, designers can create **and ship** beautiful animations witho
 
 ## Installing
 
+## Custom
+
+`yarn workspace lottie-react-native build`
+`cd packages/core`
+`npm pack --ignore-scripts`
+
 ## Breaking Changes in v6!
 
 We've made some significant updates in version 6 that may impact your current setup. To get all the details about these changes, check out the [migration guide](/MIGRATION-5-TO-6.md).
@@ -105,7 +111,7 @@ Codegen animations are supported by adding LottieAnimation items to your project
 
 ```js
 // js
-<LottieView source={"MyAnimation"} style={{width: "100%", height: "100%"}} />
+<LottieView source={"MyAnimation"} style={{ width: "100%", height: "100%" }} />
 ```
 
 Codegen is available to both C# and C++ applications. Dynamic loading of JSON strings at runtime is currently only supported in C# applications.
@@ -128,7 +134,7 @@ export default function Animation() {
   return (
     <LottieView
       source={require("../path/to/animation.json")}
-      style={{width: "100%", height: "100%"}}
+      style={{ width: "100%", height: "100%" }}
       autoPlay
       loop
     />
@@ -156,7 +162,7 @@ export default function AnimationWithImperativeApi() {
     <LottieView
       ref={animationRef}
       source={require("../path/to/animation.json")}
-      style={{width: "100%", height: "100%"}}
+      style={{ width: "100%", height: "100%" }}
     />
   );
 }
@@ -187,7 +193,7 @@ export default function ControllingAnimationProgress() {
     <AnimatedLottieView
       source={require("../path/to/animation.json")}
       progress={animationProgress.current}
-      style={{width: "100%", height: "100%"}}
+      style={{ width: "100%", height: "100%" }}
     />
   );
 }
@@ -213,7 +219,7 @@ export default function ChangingColorOfLayers() {
           color: "#F00000",
         },
       ]}
-      style={{width: "100%", height: "100%"}}
+      style={{ width: "100%", height: "100%" }}
       autoPlay
       loop
     />
